@@ -18,55 +18,58 @@
     
 </head>
 
-<div class="container">
-    <h1 class=" text-center my-5">CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+<div class="container ">
+    <h1 class=" text-center my-5 text-light">CALCOLA IL PREZZO DEL BIGLIETTO</h1>
 
-    <div class="container text-center my-5">
-        <div class="row">
-          <div class="col">
-            <label for="">Nome e Cognome</label>
-            <input type="text" class="form-control mb-3 " id="user-name">
-          </div>
-          <div class="col">
-            <label for="">Km da percorrere</label>
-            <input type="text" class="form-control mb-3 " id="user-name">
-          </div>
-          <div class="col">
-            <label for="">Fascia di età</label>
-            <select type="text" class="form-select mb-3" id="user-gender">
-                <option value="Maggiorenne">Maggiorenne</option>
-                <option value="Minorenne">Minorenne</option>
-                <option value="Over65">Over 65</option>
-    
-            </select>
-          </div>
-        </div>
-
-        <div class="py-5">
-            <button id="print-button" class="btn btn-primary">Genara</button>
-            <button id="print-button" class="btn btn-warning" type="reset">Annulla</button>
-        </div>
-    </div>
-
-    <h2>IL TUO BIGLIETTO</h2>
-
-    <div class="p-4">
-
-        <div class="container" >
+    <form action="">
+        <div class="container text-center my-5 bg-light rounded p-4">
             <div class="row">
+              <div class="col">
+                <label for="">Nome e Cognome</label>
+                <input type="text" class="form-control mb-3 " id="Name-Surname">
+              </div>
+              <div class="col">
+                <label for="">Km da percorrere</label>
+                <input type="text" class="form-control mb-3 " id="KM">
+              </div>
+              <div class="col">
+                <label for="">Fascia di età</label>
+                <select type="text" class="form-select mb-3" id="Age">
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over65">Over 65</option>
+        
+                </select>
+              </div>
+            </div>
+    
+            <div class="py-5">
+                <button id="print-button" class="btn btn-primary" type="button">Genara</button>
+                <button  class="btn btn-warning" type="reset">Annulla</button>
+            </div>
+        </div>
+
+    </form>
+
+    <h2 class="text-center text-light">IL TUO BIGLIETTO</h2>
+
+    <div class="p-4 ">
+
+        <div class="container bg-light rounded p-4" >
+            <div class="row bg-light">
                 <div class="col-4">
                     <h4>DETTAGLIO PASSEGGERI</h4>
                     <div class="p-2">
                         <h5>NOME PASSEGGERO</h5>
-                        <h6 id="User-name">...</h6>
+                        <h6 id="print-name">...</h6>
         
                     </div>
         
                 </div>
-                <div class="col-8">
+                <div class="col-8 bg-light">
                     <table class="table fs-5">
                         <thead>
-                          <tr>
+                          <tr >
                             <th scope="col">Offerta</th>
                             <th scope="col">Carrozza</th>
                             <th scope="col">Codice CP</th>
@@ -75,10 +78,10 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td scope="row">Biglietto Standard</td>
+                            <td scope="row" id="ticket-type">...</td>
                             <td>5</td>
                             <td>92911</td>
-                            <td>2.10$</td>
+                            <td id="price-ticket">...</td>
                           </tr>
                           
                         </tbody>
