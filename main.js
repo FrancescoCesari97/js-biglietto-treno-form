@@ -23,32 +23,34 @@ printButton.addEventListener("click", function () {
 
   const age = ageInput.value;
   console.log(age);
-  // moltiplicare il numero di km per 0.21 € per ottenere il prezzo totale
 
+  // moltiplicare il numero di km per 0.21 € per ottenere il prezzo totale
   const totalPrice = kmInput.value * 0.21;
   console.log("totale prezzo bigletto: " + totalPrice);
 
   // se il passeggero ha età minore a 18 anni allora verrà applicato uno sconto del 20% sul prezzo totale
-
   const underAgedisconut = totalPrice * 0.2;
   console.log("sconto under 18 " + underAgedisconut);
 
   // se il passeggero ha età maggiore a 65 anni allora verrà applicato uno sconto del 40% sul prezzo totale
-
   const overAgedisconut = totalPrice * 0.4;
   console.log("sconto under 65 " + overAgedisconut);
 
   let finalPrice;
+  let discountText;
 
   if (age == "minorenne") {
     finalPrice = totalPrice - underAgedisconut;
+    discountText = "Offerta under 18";
   } else if (age == "over65") {
     finalPrice = totalPrice - overAgedisconut;
+    discountText = "Offerta over 65";
   } else {
     finalPrice = totalPrice;
+    discountText = "Biglietto standard";
   }
 
-  ticketType.innerHTML = ageInput.value;
+  ticketType.innerHTML = discountText;
 
   // stampa costo biglietto
   priceTicket.innerHTML = finalPrice.toFixed(2) + "€";
